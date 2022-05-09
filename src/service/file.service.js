@@ -19,6 +19,7 @@ class FileService {
     async getFileByFileName(fileName) {
         const statement = `SELECT * FROM file WHERE filename = ?;`
         const [result] = await connections.execute(statement, [fileName])
+        const a = 10;
         return result[0]
     }
 }
